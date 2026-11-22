@@ -10,37 +10,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Room Catalog Data aligned with Kitulgala property details
   const ROOMS_DATA = {
-    'deluxe-single': {
-      id: 'deluxe-single',
-      name: 'Deluxe Single / Twin Room with Balcony',
-      baseRate: 72,
+    'araliya-nil-manel': {
+      id: 'araliya-nil-manel',
+      name: 'Araliya & Nil Manel (Deluxe Garden View)',
+      roomNo: 'Room No. 01 & 02',
+      tag: 'Deluxe Room • Garden View',
+      baseRate: 75,
       capacity: 2,
-      beds: '1 Twin / Single Bed with Balcony',
-      size: '28 m²',
-      view: 'Lush Garden & Mountain View',
+      beds: '1 King / Twin Bed with Private Terrace Access',
+      size: '34 m²',
+      view: 'Tranquil Rainforest Garden Ambiance',
       image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80'
     },
-    'deluxe-garden': {
-      id: 'deluxe-garden',
-      name: 'Deluxe Double Room with Balcony',
-      baseRate: 104,
-      capacity: 3,
-      beds: '1 King / Queen Bed + Extra Bed',
-      size: '36 m²',
-      view: 'Tropical Kitulgala Garden View',
+    'saman-sanctuary': {
+      id: 'saman-sanctuary',
+      name: 'The Saman Sanctuary (Super Deluxe Family Cabana)',
+      roomNo: 'Room No. 03',
+      tag: 'Super Deluxe Family Cabana • Garden View',
+      baseRate: 135,
+      capacity: 4,
+      beds: 'Master Bed + Two Twin Beds (Up to 4 Pax)',
+      size: '68 m²',
+      view: 'Lush Tropical Garden Cabana',
+      image: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80'
+    },
+    'seravelle-suite': {
+      id: 'seravelle-suite',
+      name: 'The Seravelle Suite (Super Deluxe River View)',
+      roomNo: 'Room No. 04',
+      tag: 'Super Deluxe Room • River View',
+      baseRate: 160,
+      capacity: 2,
+      beds: 'Handcrafted King Bed + Private Balcony',
+      size: '56 m²',
+      view: 'Emerald Waters of the Kelani River',
       image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80'
     },
-    'entire-villa': {
-      id: 'entire-villa',
-      name: '6-Bedroom Private Villa & Gardens (Up to 10 Guests)',
-      baseRate: 280,
-      capacity: 10,
-      beds: '6 Bedrooms (Double & Twin Beds) + 2 Bathrooms',
-      size: '180 m²',
-      view: 'Full Private Garden & River Panorama',
-      image: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80'
+    'seravelle-camp': {
+      id: 'seravelle-camp',
+      name: 'The Seravelle Camp (Luxury Glamping)',
+      roomNo: 'Bespoke Outdoor Sanctuary',
+      tag: 'Luxury Glamping • Nature Immersion',
+      baseRate: 110,
+      capacity: 2,
+      beds: 'Bespoke Glamping Bed + Canopy Deck',
+      size: '48 m²',
+      view: 'Open-Air Kitulgala Rainforest Canopy',
+      image: 'https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80'
     }
   };
+
+  // Backwards compatibility aliases
+  ROOMS_DATA['deluxe-single'] = ROOMS_DATA['araliya-nil-manel'];
+  ROOMS_DATA['deluxe-garden'] = ROOMS_DATA['seravelle-suite'];
+  ROOMS_DATA['entire-villa'] = ROOMS_DATA['saman-sanctuary'];
 
   const TAX_RATE = 0.10; // 10% Local Tourism & Service Tax
 

@@ -9,13 +9,13 @@
   <!-- Open Graph / Social Sharing -->
   <meta property="og:title" content="Seravelle Kithulgala – 4-Star Garden Hotel in Kitulgala, Sri Lanka">
   <meta property="og:description" content="Discover Seravelle Kithulgala: 4-star boutique hotel, Chinese cuisine restaurant, pet-friendly rooms, and 6-bedroom villa for up to 10 guests.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:image" content="public/main.jpeg">
   <meta property="og:type" content="website">
 
   <!-- Preload Critical Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Bootstrap 5 Grid & Base CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css" rel="stylesheet">
@@ -28,65 +28,80 @@
   <!-- ACCESSIBLE SKIP LINK -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- STICKY TRANSPARENT HEADER -->
+    <!-- LUXURY RESORT HEADER -->
   <header class="site-header" id="site-header">
-    <div class="container">
+    <div class="site-header-container">
       <nav class="site-navbar" aria-label="Main Navigation">
-        <!-- Brand Logo -->
+        <!-- 1. Left: Brand Logo -->
         <a href="index.html" class="navbar-brand">
-          Seravelle Kithulgala<span class="brand-dot" aria-hidden="true"></span>
+          SERAVELLE KITULGALA
         </a>
 
-        <!-- Desktop Navigation & Mobile Drawer -->
+        <!-- 2. Center: Simplified 6-Link Navigation Menu & Mobile Drawer -->
         <div class="nav-menu-wrapper" id="nav-menu-wrapper">
           <ul class="nav-menu">
             <li class="nav-item active">
               <a href="index.html" class="nav-link active" aria-current="page">Home</a>
             </li>
-            <li class="nav-item">
-              <a href="about.html" class="nav-link">About</a>
-            </li>
             <!-- Rooms Dropdown -->
             <li class="nav-item dropdown">
               <a href="room.html" class="nav-link dropdown-toggle" id="roomsDropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                Rooms
+                <span>Rooms</span>
+                <svg class="dropdown-arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
               </a>
               <ul class="dropdown-menu" aria-labelledby="roomsDropdown">
-                <li><a class="dropdown-item" href="room.html">All Rooms & 6-Bed Villa</a></li>
-                <li><a class="dropdown-item" href="room-superior-twin.html">Deluxe Single Room with Balcony</a></li>
-                <li><a class="dropdown-item" href="room-premier-suite.html">Deluxe Double Room</a></li>
-                <li><a class="dropdown-item" href="room-family.html">6-Bedroom Villa (10 Guests)</a></li>
+                <li><a class="dropdown-item" href="room.html">All Accommodations Overview</a></li>
+                <li><a class="dropdown-item" href="room-superior-twin.html">Araliya &amp; Nil Manel (Deluxe Garden View)</a></li>
+                <li><a class="dropdown-item" href="room-family.html">The Saman Sanctuary (Super Deluxe Family Cabana - 4 Pax)</a></li>
+                <li><a class="dropdown-item" href="room-premier-suite.html">The Seravelle Suite (Super Deluxe River View)</a></li>
+                <li><a class="dropdown-item" href="room.html#seravelle-camp">The Seravelle Camp</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a href="dining.html" class="nav-link">Dining & Bar</a>
+              <a href="dining.html" class="nav-link">Dining</a>
+            </li>
+            <!-- Experiences Dropdown (combining Amenities & Plan Your Stay) -->
+            <li class="nav-item dropdown">
+              <a href="amenities.html" class="nav-link dropdown-toggle" id="expDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span>Experiences</span>
+                <svg class="dropdown-arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="expDropdown">
+                <li><a class="dropdown-item" href="amenities.html">Resort Amenities & Facilities</a></li>
+                <li><a class="dropdown-item" href="plan-your-stay.html">Plan Your Stay & Itinerary</a></li>
+                <li><a class="dropdown-item" href="amenities.html#activities">River Rafting & Nature Excursions</a></li>
+              </ul>
             </li>
             <li class="nav-item">
-              <a href="amenities.html" class="nav-link">Amenities</a>
-            </li>
-            <li class="nav-item">
-              <a href="booking.html" class="nav-link">Booking</a>
-            </li>
-            <li class="nav-item">
-              <a href="blog.html" class="nav-link">Blog</a>
+              <a href="about.html" class="nav-link">About</a>
             </li>
             <li class="nav-item">
               <a href="contact.html" class="nav-link">Contact</a>
             </li>
-            <li class="nav-item">
-              <a href="plan-your-stay.html" class="nav-link">Plan your stay</a>
-            </li>
           </ul>
+
+          <!-- Mobile Only CTA inside drawer -->
+          <div class="mobile-drawer-cta d-lg-none mt-4 text-center">
+            <a href="booking.html" class="btn btn-header-book w-100">BOOK NOW</a>
+          </div>
         </div>
 
-        <!-- Header Actions: Search Button & Mobile Toggle -->
+        <!-- 3. Right: Search Button, BOOK NOW CTA & Mobile Toggle -->
         <div class="header-actions">
-          <button type="button" class="header-search-btn" aria-label="Search rooms, dining and resort experiences">
+          <button type="button" class="header-search-btn" aria-label="Search resort experiences and accommodations">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
           </button>
+
+          <a href="booking.html" class="btn btn-header-book d-none d-sm-inline-flex">
+            BOOK NOW
+          </a>
 
           <button type="button" class="mobile-nav-toggle" aria-label="Open mobile menu" aria-controls="nav-menu-wrapper" aria-expanded="false">
             <span class="hamburger-line"></span>
@@ -107,8 +122,11 @@
           <!-- Hero Headline & Description -->
           <div class="col-lg-7">
             <div class="hero-content">
-              <span class="kicker kicker-coral">4-Star Garden Hotel • Kitulgala, Sri Lanka</span>
-              <h1 class="hero-headline">Welcome to Seravelle Kithulgala, the paradise near the blue river & lush nature</h1>
+              <span class="kicker kicker-coral">4-STAR GARDEN HOTEL • KITULGALA, SRI LANKA</span>
+              <h1 class="hero-headline">
+                SERAVELLE KITULGALA:<br>
+                RIVER &amp; RAINFOREST SANCTUARY
+              </h1>
               <p class="hero-subtext">
                 Located on Police Station Road, Oruthota, Kitulgala. Nestled amidst vibrant tropical gardens, offering authentic Chinese cuisine, air-conditioned rooms with private balconies, 6-bedroom villa capacity for up to 10 guests, and a pet-friendly retreat.
               </p>
@@ -148,7 +166,7 @@
                   <h2 class="booking-card-title">Book Your Stay</h2>
                   <span class="badge bg-success text-white small px-2 py-1 rounded-pill">From $72.15/nt</span>
                 </div>
-                <p class="booking-card-subtitle">Check-in 1:00 PM • Check-out 12:00 PM • Free Cancellation (1-nt min)</p>
+                <p class="booking-card-subtitle">Check-in 1:00 PM • Check-out 12:00 PM • Free Cancellation</p>
               </div>
 
               <form id="hero-booking-form" novalidate>
@@ -156,7 +174,7 @@
                 <div class="form-group-custom">
                   <label for="hero-checkin" class="form-label-custom">Check-In Date (From 1:00 PM)</label>
                   <div class="input-with-icon">
-                    <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <svg class="input-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                       <line x1="16" y1="2" x2="16" y2="6"></line>
                       <line x1="8" y1="2" x2="8" y2="6"></line>
@@ -170,7 +188,7 @@
                 <div class="form-group-custom">
                   <label for="hero-checkout" class="form-label-custom">Check-Out Date (Until 12:00 PM)</label>
                   <div class="input-with-icon">
-                    <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <svg class="input-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                       <line x1="16" y1="2" x2="16" y2="6"></line>
                       <line x1="8" y1="2" x2="8" y2="6"></line>
@@ -180,29 +198,45 @@
                   </div>
                 </div>
 
-                <!-- 3. Guests Selector -->
+                <!-- 3. Accommodation Selector -->
                 <div class="form-group-custom">
-                  <label for="hero-guests" class="form-label-custom">Guests (Rooms for 1 to 10 Guests)</label>
+                  <label for="hero-room" class="form-label-custom">Select Accommodation</label>
                   <div class="input-with-icon">
-                    <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <svg class="input-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                      <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <select id="hero-room" name="room" class="form-control-custom" aria-label="Select Accommodation">
+                      <option value="araliya-nil-manel">Araliya &amp; Nil Manel (Deluxe Garden View)</option>
+                      <option value="saman-sanctuary">The Saman Sanctuary (Super Deluxe Family Cabana - 4 Pax)</option>
+                      <option value="seravelle-suite">The Seravelle Suite (Super Deluxe River View)</option>
+                      <option value="seravelle-camp">The Seravelle Camp</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- 4. Guests Selector -->
+                <div class="form-group-custom">
+                  <label for="hero-guests" class="form-label-custom">Guests</label>
+                  <div class="input-with-icon">
+                    <svg class="input-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                       <circle cx="9" cy="7" r="4"></circle>
                       <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                       <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                     </svg>
                     <select id="hero-guests" name="guests" class="form-control-custom" aria-label="Select number of guests">
-                      <option value="1">1 Guest (Deluxe Single)</option>
-                      <option value="2" selected>2 Guests (Single/Twin or Double)</option>
-                      <option value="3">3 Guests (Double + Extra Bed)</option>
-                      <option value="7">7 Guests (Group Accommodation)</option>
-                      <option value="10">10 Guests (Full 6-Bedroom Villa)</option>
+                      <option value="1">1 Guest</option>
+                      <option value="2" selected>2 Guests (Double / Twin)</option>
+                      <option value="3">3 Guests</option>
+                      <option value="4">4 Guests (The Saman Sanctuary)</option>
                     </select>
                   </div>
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="btn btn-coral w-100 py-3 mt-2">
-                  Check Availability & Best Rates
+                <button type="submit" class="btn btn-coral w-100 py-3 mt-1">
+                  SEARCH ROOMS
                   <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                     <polyline points="12 5 19 12 12 19"></polyline>
@@ -228,116 +262,172 @@
     <!-- SECTION 1: FEATURED ROOMS (3 CARDS UPDATED) -->
     <section class="section section-sand" id="featured-rooms" aria-label="Featured Accommodations">
       <div class="container">
-        <div class="section-header text-center">
-          <span class="kicker">Accommodations & Garden Suites</span>
-          <h2 class="section-title">Rooms in Kitulgala</h2>
-          <p class="section-lead">Offering peaceful rooms with balconies overlooking tropical greenery, plus an entire 6-bedroom private retreat for families and group travelers.</p>
+        <div class="section-header text-center mb-5">
+          <span class="kicker">Accommodations &amp; Sanctuaries</span>
+          <h2 class="section-title">Rooms &amp; Suites in Kitulgala</h2>
+          <p class="section-lead">Discover our four bespoke sanctuaries along the Kelani River and rainforest edge, crafted for quiet relaxation, family comfort, and nature immersion.</p>
         </div>
 
         <div class="row g-4">
-          <!-- Room 1: Deluxe Single Room with Balcony -->
-          <div class="col-lg-4 col-md-6">
-            <article class="room-card">
+          <!-- Card 1: Araliya & Nil Manel -->
+          <div class="col-lg-6 col-md-6">
+            <article class="room-card h-100">
               <div class="room-card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" 
-                     alt="Deluxe Single Room with Balcony and twin bed" 
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80" 
+                     alt="Araliya &amp; Nil Manel Deluxe Room at Seravelle Kitulgala" 
                      class="room-card-img" 
-                     width="800" height="533" loading="lazy">
-                <div class="room-tag">Deluxe Room</div>
-                <div class="room-price-badge">From $72.15 <span>/ night</span></div>
+                     width="900" height="600" loading="lazy">
+                <div class="room-tag">Deluxe Room • Garden View</div>
+                <div class="room-price-badge">Room No. 01 &amp; 02</div>
               </div>
               <div class="room-card-body">
-                <h3 class="room-card-title">Deluxe Single with Balcony</h3>
-                <p>Comfortable air-conditioned room featuring a plush twin bed, en-suite bathroom, room service, and private balcony overlooking lush gardens.</p>
+                <div class="d-flex justify-content-between align-items-baseline mb-2">
+                  <h3 class="room-card-title mb-0">Araliya &amp; Nil Manel</h3>
+                  <span class="room-capacity-badge">2 Guests</span>
+                </div>
+                <p class="room-card-description">
+                  Serene garden-facing sanctuary designed with warm natural textures, private terrace access, and tranquil rainforest ambiance.
+                </p>
                 <ul class="room-features-list">
                   <li>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                    1-2 Guests
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Room No. 01 &amp; Room No. 02
                   </li>
                   <li>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16M2 8h20M22 4v16M2 17h20"></path></svg>
-                    Twin Bed & Balcony
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                    2 Guests (Double / Twin)
                   </li>
                   <li>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a9 9 0 0 0-9 9c0 5 9 11 9 11s9-6 9-11a9 9 0 0 0-9-9z"></path></svg>
-                    Garden View & A/C
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a9 9 0 0 0-9 9c0 5 9 11 9 11s9-6 9-11a9 9 0 0 0-9-9z"></path></svg>
+                    Private Terrace Access • Garden Ambiance
                   </li>
                 </ul>
                 <div class="room-card-footer">
                   <a href="room-superior-twin.html" class="btn btn-outline-coral btn-sm">View Room</a>
-                  <a href="booking.html?room=deluxe-single" class="btn btn-coral btn-sm">Book ($72.15)</a>
+                  <a href="booking.html?room=araliya-nil-manel" class="btn btn-coral btn-sm">Book Now</a>
                 </div>
               </div>
             </article>
           </div>
 
-          <!-- Room 2: Deluxe Double Room -->
-          <div class="col-lg-4 col-md-6">
-            <article class="room-card">
+          <!-- Card 2: The Saman Sanctuary -->
+          <div class="col-lg-6 col-md-6">
+            <article class="room-card h-100">
               <div class="room-card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" 
-                     alt="Deluxe Double Room with scenic balcony" 
+                <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=900&q=80" 
+                     alt="The Saman Sanctuary Super Deluxe Family Cabana at Seravelle Kitulgala" 
                      class="room-card-img" 
-                     width="800" height="533" loading="lazy">
-                <div class="room-tag">Popular Choice</div>
-                <div class="room-price-badge">From $104 <span>/ night</span></div>
+                     width="900" height="600" loading="lazy">
+                <div class="room-tag">Super Deluxe Family Cabana • Garden View</div>
+                <div class="room-price-badge">Room No. 03</div>
               </div>
               <div class="room-card-body">
-                <h3 class="room-card-title">Deluxe Double with Balcony</h3>
-                <p>Spacious, air-conditioned double room with queen/king bed, private balcony with mountain-garden view, child-friendly amenities, and room service.</p>
+                <div class="d-flex justify-content-between align-items-baseline mb-2">
+                  <h3 class="room-card-title mb-0">The Saman Sanctuary</h3>
+                  <span class="room-capacity-badge">Up to 4 Guests</span>
+                </div>
+                <p class="room-card-description">
+                  Spacious private family cabana surrounded by lush tropical gardens, crafted for shared comfort, privacy, and unhurried relaxation.
+                </p>
                 <ul class="room-features-list">
                   <li>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                    2-3 Guests
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Room No. 03
                   </li>
                   <li>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16M2 8h20M22 4v16M2 17h20"></path></svg>
-                    King / Double Bed
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    Up to 4 Guests (4 Pax)
                   </li>
                   <li>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path></svg>
-                    Pet-Friendly & A/C
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path></svg>
+                    Lush Tropical Gardens • Shared Privacy
                   </li>
                 </ul>
                 <div class="room-card-footer">
-                  <a href="room-premier-suite.html" class="btn btn-outline-coral btn-sm">View Room</a>
-                  <a href="booking.html?room=deluxe-garden" class="btn btn-coral btn-sm">Book ($104)</a>
+                  <a href="room-family.html" class="btn btn-outline-coral btn-sm">View Cabana</a>
+                  <a href="booking.html?room=saman-sanctuary" class="btn btn-coral btn-sm">Book Now</a>
                 </div>
               </div>
             </article>
           </div>
 
-          <!-- Room 3: 6-Bedroom Entire Villa (10 Guests) -->
-          <div class="col-lg-4 col-md-6">
-            <article class="room-card">
+          <!-- Card 3: The Seravelle Suite -->
+          <div class="col-lg-6 col-md-6">
+            <article class="room-card h-100">
               <div class="room-card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80" 
-                     alt="6-Bedroom private villa in Kitulgala for 10 guests" 
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80" 
+                     alt="The Seravelle Suite Super Deluxe River View at Seravelle Kitulgala" 
                      class="room-card-img" 
-                     width="800" height="533" loading="lazy">
-                <div class="room-tag">Full Property</div>
-                <div class="room-price-badge">6 Beds <span>/ 10 Guests</span></div>
+                     width="900" height="600" loading="lazy">
+                <div class="room-tag">Super Deluxe Room • River View</div>
+                <div class="room-price-badge">Room No. 04</div>
               </div>
               <div class="room-card-body">
-                <h3 class="room-card-title">6-Bedroom Villa & Garden</h3>
-                <p>Ideal for families and groups up to 10 guests. Features 6 bedrooms, 2 bathrooms, expansive private garden, dining areas, and dedicated security.</p>
+                <div class="d-flex justify-content-between align-items-baseline mb-2">
+                  <h3 class="room-card-title mb-0">The Seravelle Suite</h3>
+                  <span class="room-capacity-badge">2 Guests</span>
+                </div>
+                <p class="room-card-description">
+                  Our signature suite overlooking the emerald waters of the Kelani River, offering elevated luxury, private river-view balcony, and bespoke finishes.
+                </p>
                 <ul class="room-features-list">
                   <li>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
-                    Up to 10 Guests
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Room No. 04
                   </li>
                   <li>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16M2 8h20M22 4v16M2 17h20"></path></svg>
-                    6 Bedrooms & 2 Baths
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                    2 Guests (Signature Luxury)
                   </li>
                   <li>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
-                    Private Garden
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h20M2 12a10 10 0 0 1 10-10 10 10 0 0 1 10 10M2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10"></path></svg>
+                    Private River-View Balcony • Bespoke Finishes
                   </li>
                 </ul>
                 <div class="room-card-footer">
-                  <a href="room-family.html" class="btn btn-outline-coral btn-sm">View Villa</a>
-                  <a href="booking.html?room=entire-villa" class="btn btn-coral btn-sm">Reserve Villa</a>
+                  <a href="room-premier-suite.html" class="btn btn-outline-coral btn-sm">View Suite</a>
+                  <a href="booking.html?room=seravelle-suite" class="btn btn-coral btn-sm">Book Now</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 4: The Seravelle Camp -->
+          <div class="col-lg-6 col-md-6">
+            <article class="room-card h-100">
+              <div class="room-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=900&q=80" 
+                     alt="The Seravelle Camp Luxury Glamping at Seravelle Kitulgala" 
+                     class="room-card-img" 
+                     width="900" height="600" loading="lazy">
+                <div class="room-tag">Luxury Glamping • Nature Immersion</div>
+                <div class="room-price-badge">Bespoke Sanctuary</div>
+              </div>
+              <div class="room-card-body">
+                <div class="d-flex justify-content-between align-items-baseline mb-2">
+                  <h3 class="room-card-title mb-0">The Seravelle Camp</h3>
+                  <span class="room-capacity-badge">Wilderness Glamping</span>
+                </div>
+                <p class="room-card-description">
+                  An intimate, refined outdoor camp experience blending open-air wilderness adventure with curated luxury comforts beneath the Kitulgala canopy.
+                </p>
+                <ul class="room-features-list">
+                  <li>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 22 22 22"></polygon></svg>
+                    Bespoke Outdoor Sanctuary
+                  </li>
+                  <li>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    Nature Immersion &amp; Rainforest Canopy
+                  </li>
+                  <li>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    Curated Luxury Wilderness Comforts
+                  </li>
+                </ul>
+                <div class="room-card-footer">
+                  <a href="room.html#seravelle-camp" class="btn btn-outline-coral btn-sm">Explore Camp</a>
+                  <a href="booking.html?room=seravelle-camp" class="btn btn-coral btn-sm">Book Now</a>
                 </div>
               </div>
             </article>
@@ -345,73 +435,113 @@
         </div>
 
         <div class="text-center mt-5">
-          <a href="room.html" class="btn btn-outline-navy">View All Room Details & Rates</a>
+          <a href="room.html" class="btn btn-outline-navy">View All Accommodation Details &amp; Rates</a>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 2: ABOUT INTRO (Kitulgala Details) -->
-    <section class="section section-white" id="about-intro" aria-label="About Seravelle Kithulgala">
-      <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6">
-            <div class="position-relative">
-              <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" 
-                   alt="Seravelle Kithulgala 4-Star Hotel with lush gardens" 
-                   class="rounded-4 shadow-lg w-100" 
-                   width="900" height="600" loading="lazy">
-              <!-- Rating Badge -->
-              <div class="position-absolute bottom-0 start-0 m-4 p-3 bg-white rounded-3 shadow-md border d-none d-sm-flex align-items-center gap-3">
-                <div class="fs-1 fw-bold font-serif" style="color: var(--color-coral);">5.0★</div>
-                <div class="small lh-sm text-dark">
-                  <strong>4-Star Hotel in Kitulgala</strong><br>Oruthota, Sri Lanka
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <span class="kicker">Oruthota, Kitulgala, Sri Lanka</span>
-            <h2 class="section-title">A 4-Star Garden Sanctuary in Kitulgala</h2>
-            <p class="lead">
-              Nestled along Police Station Road in Oruthota, Kitulgala (Postal Code: 71720), Seravelle Kithulgala is a peaceful 4-star hotel surrounded by verdant rainforest foliage, scenic mountain views, and quiet nature gardens.
-            </p>
-            <p>
-              Whether you are an adventure seeker visiting Kitulgala for world-famous Kelani River white water rafting, a family traveling with children and pets, or seeking delicious authentic Chinese dining, Seravelle welcomes you with genuine warmth.
-            </p>
-            
-            <div class="row g-3 my-3">
-              <div class="col-sm-6">
-                <div class="p-3 border rounded-3 bg-sand-light" style="background-color: var(--color-sand-light);">
-                  <strong class="d-block text-navy">Check-In / Check-Out</strong>
-                  <span class="small text-muted">From 1:00 PM • Until 12:00 PM (Noon)</span>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="p-3 border rounded-3 bg-sand-light" style="background-color: var(--color-sand-light);">
-                  <strong class="d-block text-navy">Pet-Friendly Policy</strong>
-                  <span class="small text-muted">Pets are warmly allowed on the property</span>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="p-3 border rounded-3 bg-sand-light" style="background-color: var(--color-sand-light);">
-                  <strong class="d-block text-navy">On-Site Restaurant</strong>
-                  <span class="small text-muted">Authentic Chinese cuisine & room service</span>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="p-3 border rounded-3 bg-sand-light" style="background-color: var(--color-sand-light);">
-                  <strong class="d-block text-navy">Free Private Parking</strong>
-                  <span class="small text-muted">Secure on-site parking for all guests</span>
-                </div>
-              </div>
-            </div>
-
-            <a href="about.html" class="btn btn-teal">
-              Discover More About Us
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-          </div>
+    <!-- SECTION 2: ABOUT EDITORIAL STORY -->
+    <section class="section about-editorial-section" id="about-intro" aria-label="About Seravelle Kitulgala">
+      <div class="container" style="max-width: 1240px;">
+        
+        <!-- Editorial Header -->
+        <div class="about-editorial-header mb-5">
+          <span class="kicker kicker-coral">ABOUT</span>
+          <h2 class="about-editorial-lead font-serif">
+            Nestled along the emerald banks of the Kelani River
+          </h2>
+          <div class="editorial-divider"></div>
         </div>
+
+        <!-- Two-Column Editorial Layout -->
+        <div class="row g-5 align-items-center">
+          
+          <!-- Left Column: Narrative Story & Highlights -->
+          <div class="col-lg-7">
+            <div class="about-narrative-content pe-lg-4">
+              
+              <!-- Paragraph 1 -->
+              <p class="about-body-text lead-story">
+                Seravelle Kitulgala is a refined sanctuary where eco-luxury meets timeless tranquility. Inspired by the rhythm of the rainforest and the purity of flowing water, Seravelle was created for the modern explorer—those who seek meaningful connection to nature, without compromising comfort or elegance.
+              </p>
+
+              <!-- Sensory Highlights Block -->
+              <div class="sensory-highlights-card my-4">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="sensory-icon-sparkle">✦</span>
+                  <h3 class="sensory-heading font-serif">Here, every detail is curated to awaken your senses:</h3>
+                </div>
+                <p class="sensory-text mb-0">
+                  Wake to birdsong and mist-wrapped hills. Dine with forest-framed views. Sleep beneath the stars in quiet, bespoke luxury. At Seravelle, we invite you to pause, breathe, and belong.
+                </p>
+              </div>
+
+              <!-- Closing Experience Block in Deep Forest Emerald -->
+              <div class="closing-experience-block">
+                <p class="closing-experience-text">
+                  From white-water adventure to riverside yoga, from jungle treks to candlelit forest dinners, Seravelle is more than a resort—it’s an experience. One rooted in sustainability, Sri Lankan heritage, and a spirit of calm discovery.
+                </p>
+              </div>
+
+              <div class="d-flex flex-wrap gap-3 align-items-center mt-5">
+                <a href="about.html" class="btn btn-coral">
+                  Discover Our Story
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="amenities.html" class="btn btn-outline-navy">Explore Experiences</a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right Column: Curated River-and-Rainforest Imagery & Sensory Highlights -->
+          <div class="col-lg-5">
+            <div class="about-visual-editorial">
+              
+              <div class="position-relative mb-4">
+                <img src="public/main.jpeg" 
+                     alt="Seravelle Kitulgala Reception and Heritage Eco-Sanctuary" 
+                     class="rounded-4 shadow-lg w-100 object-cover" 
+                     style="height: 380px; border: 1px solid var(--color-border-gold);" 
+                     loading="lazy">
+                <div class="editorial-image-badge position-absolute bottom-0 start-0 m-4 p-3 rounded-3 shadow-md">
+                  <span class="text-gold font-serif fw-bold fs-5 d-block">Eco-Luxury Sanctuary</span>
+                  <span class="small text-sage-mist">Kelani River • Kitulgala</span>
+                </div>
+              </div>
+
+              <!-- Curated Sensory Highlight Pillars -->
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="curated-pillar-box p-3 rounded-3">
+                    <span class="pillar-label d-block">01 • Purity</span>
+                    <strong class="pillar-title d-block">Flowing Waters</strong>
+                    <span class="pillar-desc small d-block">River breezes & pristine Kelani banks</span>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="curated-pillar-box p-3 rounded-3">
+                    <span class="pillar-label d-block">02 • Rhythm</span>
+                    <strong class="pillar-title d-block">Rainforest Calm</strong>
+                    <span class="pillar-desc small d-block">Birdsong & mist-wrapped peaks</span>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="curated-pillar-box p-3 rounded-3 d-flex align-items-center justify-content-between">
+                    <div>
+                      <span class="pillar-label d-block">03 • Heritage</span>
+                      <strong class="pillar-title">Sri Lankan Hospitality</strong>
+                    </div>
+                    <span class="badge bg-emerald text-gold px-3 py-2 rounded-pill">5.0 ★ Rated</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </section>
 

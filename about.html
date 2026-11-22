@@ -13,7 +13,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -22,57 +22,81 @@
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Header -->
-  <header class="site-header header-solid" id="site-header">
-    <div class="container">
+    <!-- LUXURY RESORT HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="site-header-container">
       <nav class="site-navbar" aria-label="Main Navigation">
+        <!-- 1. Left: Brand Logo -->
         <a href="index.html" class="navbar-brand">
-          Seravelle Kithulgala<span class="brand-dot" aria-hidden="true"></span>
+          SERAVELLE KITULGALA
         </a>
 
+        <!-- 2. Center: Simplified 6-Link Navigation Menu & Mobile Drawer -->
         <div class="nav-menu-wrapper" id="nav-menu-wrapper">
           <ul class="nav-menu">
             <li class="nav-item">
               <a href="index.html" class="nav-link">Home</a>
             </li>
-            <li class="nav-item active">
-              <a href="about.html" class="nav-link active" aria-current="page">About</a>
-            </li>
+            <!-- Rooms Dropdown -->
             <li class="nav-item dropdown">
               <a href="room.html" class="nav-link dropdown-toggle" id="roomsDropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                Rooms
+                <span>Rooms</span>
+                <svg class="dropdown-arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
               </a>
               <ul class="dropdown-menu" aria-labelledby="roomsDropdown">
-                <li><a class="dropdown-item" href="room.html">All Rooms & 6-Bed Villa</a></li>
-                <li><a class="dropdown-item" href="room-superior-twin.html">Deluxe Single (Balcony)</a></li>
-                <li><a class="dropdown-item" href="room-premier-suite.html">Deluxe Double Room</a></li>
-                <li><a class="dropdown-item" href="room-family.html">6-Bedroom Villa (10 Guests)</a></li>
+                <li><a class="dropdown-item" href="room.html">All Accommodations Overview</a></li>
+                <li><a class="dropdown-item" href="room-superior-twin.html">Araliya &amp; Nil Manel (Deluxe Garden View)</a></li>
+                <li><a class="dropdown-item" href="room-family.html">The Saman Sanctuary (Super Deluxe Family Cabana - 4 Pax)</a></li>
+                <li><a class="dropdown-item" href="room-premier-suite.html">The Seravelle Suite (Super Deluxe River View)</a></li>
+                <li><a class="dropdown-item" href="room.html#seravelle-camp">The Seravelle Camp</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a href="dining.html" class="nav-link">Dining & Bar</a>
+              <a href="dining.html" class="nav-link">Dining</a>
             </li>
-            <li class="nav-item">
-              <a href="amenities.html" class="nav-link">Amenities</a>
+            <!-- Experiences Dropdown (combining Amenities & Plan Your Stay) -->
+            <li class="nav-item dropdown">
+              <a href="amenities.html" class="nav-link dropdown-toggle" id="expDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span>Experiences</span>
+                <svg class="dropdown-arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="expDropdown">
+                <li><a class="dropdown-item" href="amenities.html">Resort Amenities & Facilities</a></li>
+                <li><a class="dropdown-item" href="plan-your-stay.html">Plan Your Stay & Itinerary</a></li>
+                <li><a class="dropdown-item" href="amenities.html#activities">River Rafting & Nature Excursions</a></li>
+              </ul>
             </li>
-            <li class="nav-item">
-              <a href="booking.html" class="nav-link">Booking</a>
-            </li>
-            <li class="nav-item">
-              <a href="blog.html" class="nav-link">Blog</a>
+            <li class="nav-item active">
+              <a href="about.html" class="nav-link active" aria-current="page">About</a>
             </li>
             <li class="nav-item">
               <a href="contact.html" class="nav-link">Contact</a>
             </li>
-            <li class="nav-item">
-              <a href="plan-your-stay.html" class="nav-link">Plan your stay</a>
-            </li>
           </ul>
+
+          <!-- Mobile Only CTA inside drawer -->
+          <div class="mobile-drawer-cta d-lg-none mt-4 text-center">
+            <a href="booking.html" class="btn btn-header-book w-100">BOOK NOW</a>
+          </div>
         </div>
 
+        <!-- 3. Right: Search Button, BOOK NOW CTA & Mobile Toggle -->
         <div class="header-actions">
-          <button type="button" class="header-search-btn" aria-label="Search resort experiences">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <button type="button" class="header-search-btn" aria-label="Search resort experiences and accommodations">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
           </button>
+
+          <a href="booking.html" class="btn btn-header-book d-none d-sm-inline-flex">
+            BOOK NOW
+          </a>
+
           <button type="button" class="mobile-nav-toggle" aria-label="Open mobile menu" aria-controls="nav-menu-wrapper" aria-expanded="false">
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
@@ -85,77 +109,122 @@
 
   <main id="main-content">
     <!-- PAGE HERO -->
-    <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1800&q=80');">
+    <section class="page-hero" style="background-image: url('public/main.jpeg');">
       <div class="page-hero-overlay"></div>
       <div class="container page-hero-content">
         <nav class="breadcrumb-nav" aria-label="Breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">About Us</li>
+            <li class="breadcrumb-item active" aria-current="page">About</li>
           </ol>
         </nav>
-        <span class="badge bg-white text-navy px-3 py-1 rounded-pill fw-bold text-uppercase mb-2">4-Star Hotel • 5.0 Rating</span>
-        <h1 class="text-white mb-2">Our Story in Kitulgala, Sri Lanka</h1>
-        <p class="lead text-white-50" style="max-width: 650px;">
-          A peaceful garden retreat on Police Station Road, Oruthota. Dedicated to nature, pet-friendly comfort, authentic Chinese dining, and Sri Lankan hospitality.
+        <span class="badge bg-emerald text-gold px-3 py-1 rounded-pill fw-bold text-uppercase mb-2">4-Star Eco-Luxury • Kitulgala</span>
+        <h1 class="text-white mb-2 font-serif">About Seravelle Kitulgala</h1>
+        <p class="lead text-sage-mist" style="max-width: 680px;">
+          Nestled along the emerald banks of the Kelani River, where eco-luxury meets timeless tranquility.
         </p>
       </div>
     </section>
 
-    <!-- SECTION: THE KITULGALA SANCTUARY -->
-    <section class="section section-white">
-      <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6">
-            <span class="kicker">Police Station Road, Oruthota, Kitulgala</span>
-            <h2 class="section-title">Where Rainforest Greenery Meets Warm Hospitality</h2>
-            <p class="lead">
-              Seravelle Kithulgala is a distinguished 4-star boutique hotel located in the heart of Kitulgala, Sri Lanka—world-renowned for its emerald hills, pristine rainforests, and the rushing waters of the Kelani River.
-            </p>
-            <p>
-              Set amidst expansive private gardens with sweeping views of the surrounding hills, our property provides a tranquil sanctuary. Guests can choose from comfortable individual rooms—such as our Deluxe Single Room with Balcony—or reserve the entire 6-bedroom villa retreat with 2 bathrooms to host family gatherings of up to 10 guests.
-            </p>
-            <p>
-              We take pride in our on-site Chinese cuisine restaurant, our pet-friendly grounds where pets are warmly welcomed, and our thoughtful amenities including air conditioning, 24/7 security, room service, and free private parking.
-            </p>
-            
-            <div class="d-flex gap-4 pt-3 border-top mt-4">
-              <div>
-                <strong class="d-block fs-2 font-serif text-navy">4-Star</strong>
-                <span class="small text-muted">Hotel Quality</span>
+    <!-- SECTION: EDITORIAL ABOUT STORY -->
+    <section class="section about-editorial-section" id="about-story">
+      <div class="container" style="max-width: 1240px;">
+        
+        <!-- Editorial Header -->
+        <div class="about-editorial-header mb-5">
+          <span class="kicker kicker-coral">ABOUT</span>
+          <h2 class="about-editorial-lead font-serif">
+            Nestled along the emerald banks of the Kelani River
+          </h2>
+          <div class="editorial-divider"></div>
+        </div>
+
+        <!-- Two-Column Editorial Layout -->
+        <div class="row g-5 align-items-center">
+          
+          <!-- Left Column: Narrative Story & Highlights -->
+          <div class="col-lg-7">
+            <div class="about-narrative-content pe-lg-4">
+              
+              <!-- Paragraph 1 -->
+              <p class="about-body-text lead-story">
+                Seravelle Kitulgala is a refined sanctuary where eco-luxury meets timeless tranquility. Inspired by the rhythm of the rainforest and the purity of flowing water, Seravelle was created for the modern explorer—those who seek meaningful connection to nature, without compromising comfort or elegance.
+              </p>
+
+              <!-- Sensory Highlights Block -->
+              <div class="sensory-highlights-card my-4">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="sensory-icon-sparkle">✦</span>
+                  <h3 class="sensory-heading font-serif">Here, every detail is curated to awaken your senses:</h3>
+                </div>
+                <p class="sensory-text mb-0">
+                  Wake to birdsong and mist-wrapped hills. Dine with forest-framed views. Sleep beneath the stars in quiet, bespoke luxury. At Seravelle, we invite you to pause, breathe, and belong.
+                </p>
               </div>
-              <div>
-                <strong class="d-block fs-2 font-serif text-navy">5.0★</strong>
-                <span class="small text-muted">Guest Rating</span>
+
+              <!-- Closing Experience Block in Deep Forest Emerald -->
+              <div class="closing-experience-block">
+                <p class="closing-experience-text">
+                  From white-water adventure to riverside yoga, from jungle treks to candlelit forest dinners, Seravelle is more than a resort—it’s an experience. One rooted in sustainability, Sri Lankan heritage, and a spirit of calm discovery.
+                </p>
               </div>
-              <div>
-                <strong class="d-block fs-2 font-serif text-navy">6 Beds</strong>
-                <span class="small text-muted">Up to 10 Guests</span>
+
+              <div class="d-flex flex-wrap gap-3 align-items-center mt-5">
+                <a href="booking.html" class="btn btn-coral">Reserve Your Stay</a>
+                <a href="amenities.html" class="btn btn-outline-navy">Explore Experiences</a>
               </div>
+
             </div>
           </div>
 
-          <div class="col-lg-6">
-            <div class="row g-3">
-              <div class="col-6">
-                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" 
-                     alt="Kitulgala hotel garden exterior" 
-                     class="rounded-3 shadow w-100 mb-3" width="600" height="400" loading="lazy">
-                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" 
-                     alt="Deluxe room with balcony" 
-                     class="rounded-3 shadow w-100" width="600" height="400" loading="lazy">
+          <!-- Right Column: Curated River-and-Rainforest Imagery & Sensory Highlights -->
+          <div class="col-lg-5">
+            <div class="about-visual-editorial">
+              
+              <div class="position-relative mb-4">
+                <img src="public/main.jpeg" 
+                     alt="Seravelle Kitulgala Reception and Heritage Eco-Sanctuary" 
+                     class="rounded-4 shadow-lg w-100 object-cover" 
+                     style="height: 380px; border: 1px solid var(--color-border-gold);" 
+                     loading="lazy">
+                <div class="editorial-image-badge position-absolute bottom-0 start-0 m-4 p-3 rounded-3 shadow-md">
+                  <span class="text-gold font-serif fw-bold fs-5 d-block">Eco-Luxury Sanctuary</span>
+                  <span class="small text-sage-mist">Kelani River • Kitulgala</span>
+                </div>
               </div>
-              <div class="col-6 pt-4">
-                <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=600&q=80" 
-                     alt="Chinese restaurant culinary dishes" 
-                     class="rounded-3 shadow w-100 mb-3" width="600" height="400" loading="lazy">
-                <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80" 
-                     alt="Spacious 6-bedroom villa living area" 
-                     class="rounded-3 shadow w-100" width="600" height="400" loading="lazy">
+
+              <!-- Curated Sensory Highlight Pillars -->
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="curated-pillar-box p-3 rounded-3">
+                    <span class="pillar-label d-block">01 • Purity</span>
+                    <strong class="pillar-title d-block">Flowing Waters</strong>
+                    <span class="pillar-desc small d-block">River breezes & pristine Kelani banks</span>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="curated-pillar-box p-3 rounded-3">
+                    <span class="pillar-label d-block">02 • Rhythm</span>
+                    <strong class="pillar-title d-block">Rainforest Calm</strong>
+                    <span class="pillar-desc small d-block">Birdsong & mist-wrapped peaks</span>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="curated-pillar-box p-3 rounded-3 d-flex align-items-center justify-content-between">
+                    <div>
+                      <span class="pillar-label d-block">03 • Heritage</span>
+                      <strong class="pillar-title">Sri Lankan Hospitality</strong>
+                    </div>
+                    <span class="badge bg-emerald text-gold px-3 py-2 rounded-pill">5.0 ★ Rated</span>
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
+
         </div>
+
       </div>
     </section>
 

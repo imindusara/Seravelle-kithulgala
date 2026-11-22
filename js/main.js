@@ -143,6 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const checkin = checkinInput ? checkinInput.value : '';
       const checkout = checkoutInput ? checkoutInput.value : '';
       const guests = document.getElementById('hero-guests') ? document.getElementById('hero-guests').value : '2';
+      const room = document.getElementById('hero-room') ? document.getElementById('hero-room').value : '';
 
       if (!checkin || !checkout) {
         showToast('Please select dates', 'Choose valid check-in and check-out dates to check availability.', 'error');
@@ -157,7 +158,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       setTimeout(() => {
-        window.location.href = `booking.html?checkin=${encodeURIComponent(checkin)}&checkout=${encodeURIComponent(checkout)}&guests=${encodeURIComponent(guests)}`;
+        let redirectUrl = `booking.html?checkin=${encodeURIComponent(checkin)}&checkout=${encodeURIComponent(checkout)}&guests=${encodeURIComponent(guests)}`;
+        if (room) {
+          redirectUrl += `&room=${encodeURIComponent(room)}`;
+        }
+        window.location.href = redirectUrl;
       }, 400);
     });
   }

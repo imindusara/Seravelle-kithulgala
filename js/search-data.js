@@ -27,25 +27,32 @@ window.SERAVELLE_SEARCH_INDEX = [
     description: "Deluxe Single Room with Balcony from $72-$104/night, plus our exclusive 6-bedroom villa accommodating up to 10 guests."
   },
   {
-    title: "Deluxe Single Room with Balcony",
+    title: "Araliya & Nil Manel (Room No. 01 & 02)",
     url: "room-superior-twin.html",
     category: "Room",
-    tags: ["deluxe", "single", "twin bed", "balcony", "garden view", "air conditioning", "affordable", "72", "104"],
-    description: "Comfortable room with twin bed, private balcony overlooking lush gardens, air conditioning, and room service."
+    tags: ["araliya", "nil manel", "deluxe room", "garden view", "room 01", "room 02", "double", "twin", "terrace"],
+    description: "Serene garden-facing sanctuary with private terrace access and tranquil rainforest ambiance. 2 Guests (Double/Twin)."
   },
   {
-    title: "Deluxe Double Room with Balcony",
-    url: "room-premier-suite.html",
-    category: "Room",
-    tags: ["double", "deluxe", "balcony", "mountain view", "air conditioning", "garden view", "104"],
-    description: "Spacious air-conditioned room with queen/king bed, scenic balcony views of Kitulgala greenery, and free parking."
-  },
-  {
-    title: "6-Bedroom Private Garden Villa (10 Guests)",
+    title: "The Saman Sanctuary (Room No. 03 - 4 Pax)",
     url: "room-family.html",
     category: "Room",
-    tags: ["6-bedroom", "10 guests", "large group", "family", "2 bathrooms", "private garden", "child-friendly", "villa"],
-    description: "Entire 6-bedroom villa retreat with 2 bathrooms and private tropical gardens, perfectly suited for up to 10 guests."
+    tags: ["saman sanctuary", "family cabana", "room 03", "4 pax", "4 guests", "super deluxe", "garden view", "tropical"],
+    description: "Spacious private family cabana surrounded by lush tropical gardens, crafted for shared comfort and privacy for up to 4 guests."
+  },
+  {
+    title: "The Seravelle Suite (Room No. 04 - River View)",
+    url: "room-premier-suite.html",
+    category: "Room",
+    tags: ["seravelle suite", "river view", "room 04", "super deluxe", "signature suite", "kelani river", "balcony"],
+    description: "Our signature suite overlooking the emerald waters of the Kelani River with elevated luxury and private river-view balcony."
+  },
+  {
+    title: "The Seravelle Camp (Luxury Glamping)",
+    url: "room.html#seravelle-camp",
+    category: "Experience",
+    tags: ["seravelle camp", "luxury glamping", "nature immersion", "canopy", "outdoor sanctuary", "safari"],
+    description: "An intimate, refined outdoor camp experience blending open-air wilderness adventure with curated luxury comforts."
   },
   {
     title: "Chinese Restaurant & Dining",
