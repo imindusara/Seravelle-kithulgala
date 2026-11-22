@@ -280,23 +280,23 @@ document.addEventListener('DOMContentLoaded', () => {
     if (summaryDates) {
       const inFormat = new Date(state.checkin).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
       const outFormat = new Date(state.checkout).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-      summaryDates.textContent = `${inFormat} (from 1 PM) – ${outFormat} (until 12 PM)`;
+      summaryDates.textContent = `${inFormat} (from 2 PM) – ${outFormat} (until 11 AM)`;
     }
     if (summaryGuests) summaryGuests.textContent = `${state.guests} ${state.guests === 1 ? 'Guest' : 'Guests'}`;
-    if (summaryRoomTotal) summaryRoomTotal.textContent = `$${roomSubtotal.toFixed(2)}`;
-    if (summaryAddonsTotal) summaryAddonsTotal.textContent = `$${addonsTotal.toFixed(2)}`;
-    if (summaryTaxes) summaryTaxes.textContent = `$${taxes.toFixed(2)}`;
+    if (summaryRoomTotal) summaryRoomTotal.textContent = `LKR ${roomSubtotal.toLocaleString('en-US')}`;
+    if (summaryAddonsTotal) summaryAddonsTotal.textContent = `LKR ${addonsTotal.toLocaleString('en-US')}`;
+    if (summaryTaxes) summaryTaxes.textContent = `LKR ${Math.round(taxes).toLocaleString('en-US')}`;
 
     if (summaryDiscountRow && summaryDiscountVal) {
       if (discountAmount > 0) {
         summaryDiscountRow.style.display = 'flex';
-        summaryDiscountVal.textContent = `-$${discountAmount.toFixed(2)}`;
+        summaryDiscountVal.textContent = `-LKR ${Math.round(discountAmount).toLocaleString('en-US')}`;
       } else {
         summaryDiscountRow.style.display = 'none';
       }
     }
 
-    if (summaryGrandTotal) summaryGrandTotal.textContent = `$${grandTotal.toFixed(2)}`;
+    if (summaryGrandTotal) summaryGrandTotal.textContent = `LKR ${Math.round(grandTotal).toLocaleString('en-US')}`;
   }
 
   updatePriceSummary();

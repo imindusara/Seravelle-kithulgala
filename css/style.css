@@ -2577,6 +2577,15 @@ p {
   background-color: rgba(200, 169, 106, 0.08);
 }
 
+.tariff-table tbody tr.table-row-active td {
+  background-color: rgba(200, 169, 106, 0.16);
+  color: var(--color-depth-dark);
+}
+
+.tariff-table tbody tr.table-row-active td:first-child {
+  border-left: 3px solid var(--color-accent-gold);
+}
+
 .tariff-rate-bold {
   font-weight: 700;
   color: var(--color-depth-dark);
