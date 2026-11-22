@@ -1,0 +1,99 @@
+/**
+ * SERAVELLE KITHULGALA - SEARCH DATABASE
+ * Index of 4-star hotel in Kitulgala, Sri Lanka: Chinese restaurant, pet-friendly amenities,
+ * Deluxe Single Room with Balcony, 6-bedroom retreat, and nature gardens.
+ */
+
+window.SERAVELLE_SEARCH_INDEX = [
+  {
+    title: "Seravelle Kithulgala (Home)",
+    url: "index.html",
+    category: "Page",
+    tags: ["cozy", "kitulgala", "sri lanka", "hotel", "4-star", "garden", "pet-friendly", "oruthota", "home"],
+    description: "4-star garden hotel in Kitulgala, Sri Lanka. Rated 5.0 stars with Chinese restaurant, pet-friendly rooms, and free private parking."
+  },
+  {
+    title: "About Our Hotel & Kitulgala Gardens",
+    url: "about.html",
+    category: "Page",
+    tags: ["about", "kitulgala", "4-star", "garden", "rating", "police station road", "pet-friendly", "nature"],
+    description: "4-star tranquil garden sanctuary on Police Station Road, Oruthota, Kitulgala. Rated 5.0 by our guests."
+  },
+  {
+    title: "Rooms & Villa Accommodations",
+    url: "room.html",
+    category: "Rooms",
+    tags: ["rooms", "deluxe single", "twin bed", "balcony", "6-bedroom", "10 guests", "villa", "rates", "72", "104"],
+    description: "Deluxe Single Room with Balcony from $72-$104/night, plus our exclusive 6-bedroom villa accommodating up to 10 guests."
+  },
+  {
+    title: "Deluxe Single Room with Balcony",
+    url: "room-superior-twin.html",
+    category: "Room",
+    tags: ["deluxe", "single", "twin bed", "balcony", "garden view", "air conditioning", "affordable", "72", "104"],
+    description: "Comfortable room with twin bed, private balcony overlooking lush gardens, air conditioning, and room service."
+  },
+  {
+    title: "Deluxe Double Room with Balcony",
+    url: "room-premier-suite.html",
+    category: "Room",
+    tags: ["double", "deluxe", "balcony", "mountain view", "air conditioning", "garden view", "104"],
+    description: "Spacious air-conditioned room with queen/king bed, scenic balcony views of Kitulgala greenery, and free parking."
+  },
+  {
+    title: "6-Bedroom Private Garden Villa (10 Guests)",
+    url: "room-family.html",
+    category: "Room",
+    tags: ["6-bedroom", "10 guests", "large group", "family", "2 bathrooms", "private garden", "child-friendly", "villa"],
+    description: "Entire 6-bedroom villa retreat with 2 bathrooms and private tropical gardens, perfectly suited for up to 10 guests."
+  },
+  {
+    title: "Chinese Restaurant & Dining",
+    url: "dining.html",
+    category: "Dining",
+    tags: ["dining", "restaurant", "chinese cuisine", "room service", "breakfast", "parking", "authentic"],
+    description: "On-site restaurant serving authentic Chinese cuisine, local specialties, and convenient in-room dining service."
+  },
+  {
+    title: "Hotel Amenities & Pet-Friendly Policy",
+    url: "amenities.html",
+    category: "Amenities",
+    tags: ["amenities", "pet-friendly", "pets allowed", "air conditioning", "free parking", "security", "child-friendly", "no pool"],
+    description: "Air conditioning, free private parking, 24/7 security, pet-friendly grounds, child-friendly facilities, room service. (No swimming pool)."
+  },
+  {
+    title: "Book Your Stay (Check-in 1 PM, Check-out 12 PM)",
+    url: "booking.html",
+    category: "Booking",
+    tags: ["booking", "check-in 1pm", "check-out 12pm", "free cancellation", "1 night minimum", "rates", "72", "104"],
+    description: "Direct reservation engine. Check-in from 1:00 PM, check-out until 12:00 PM. 1 night minimum with free cancellation."
+  },
+  {
+    title: "Kitulgala Journal & Travel Blog",
+    url: "blog.html",
+    category: "Blog",
+    tags: ["blog", "kitulgala", "white water rafting", "rainforest", "birdwatching", "kelani river", "sri lanka"],
+    description: "White water rafting, Belilena prehistoric caves, rainforest walks, and birdwatching in Kitulgala."
+  },
+  {
+    title: "Contact & Location (Police Station Rd, Kitulgala)",
+    url: "contact.html",
+    category: "Contact",
+    tags: ["contact", "police station road", "oruthota", "kitulgala", "71720", "sri lanka", "phone", "email"],
+    description: "Located on Police Station Road, Oruthota, Kitulgala, 71720, Sri Lanka. Reach our 24/7 front desk team."
+  },
+  {
+    title: "Plan Your Kitulgala Stay",
+    url: "plan-your-stay.html",
+    category: "Guide",
+    tags: ["plan", "kitulgala", "getting here", "colombo transfer", "rafting", "pet travel", "weather"],
+    description: "Travel routes from Colombo/Airport to Kitulgala, packing advice, pet travel tips, and nature excursions."
+  },
+  {
+    title: "Terms & Cancellation Policy",
+    url: "privacy-policy.html",
+    category: "Legal",
+    tags: ["terms", "cancellation", "check-in 1pm", "check-out 12pm", "pets", "accessibility", "privacy"],
+    description: "Free cancellation policies, pet regulations, check-in/out hours, and guest guidelines."
+  }
+];

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Stay – Seravelle Kithulgala, Sri Lanka</title>
+  <meta name="description" content="Book direct at Seravelle Kithulgala: Deluxe Single Room from $72.15/nt, Deluxe Double from $104/nt, and 6-bedroom villa for up to 10 guests. Check-in 1 PM, Check-out 12 PM, free cancellation.">
+  
+  <meta property="og:title" content="Book Your Stay – Seravelle Kithulgala">
+  <meta property="og:description" content="Direct booking engine with best rates ($72 - $104/night), 6-bedroom villa, pet-friendly rooms, and free cancellation.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .booking-room-option {
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      position: relative;
+    }
+    .booking-room-option:hover {
+      border-color: var(--color-teal);
+      box-shadow: var(--shadow-md);
+    }
+    .booking-room-option.selected {
+      border-color: var(--color-coral);
+      background-color: var(--color-coral-light);
+    }
+    .booking-step-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--color-muted);
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      background: var(--color-sand-light);
+    }
+    .booking-step-badge.active {
+      color: var(--color-white);
+      background: var(--color-navy);
+    }
+    .order-summary-card {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: 28px;
+      border: 1px solid var(--color-border);
+    }
+    .summary-line {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 0.92rem;
+      color: var(--color-muted);
+    }
+    .summary-total {
+      border-top: 2px dashed var(--color-border);
+      padding-top: 14px;
+      margin-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--color-navy);
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header header-solid" id="site-header">
+    <div class="container">
+      <nav class="site-navbar" aria-label="Main Navigation">
+        <a href="index.html" class="navbar-brand">Seravelle Kithulgala<span class="brand-dot" aria-hidden="true"></span></a>
+
+        <div class="nav-menu-wrapper" id="nav-menu-wrapper">
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item dropdown">
+              <a href="room.html" class="nav-link dropdown-toggle" id="roomsDropdown" role="button" aria-haspopup="true" aria-expanded="false">Rooms</a>
+              <ul class="dropdown-menu" aria-labelledby="roomsDropdown">
+                <li><a class="dropdown-item" href="room.html">All Rooms & 6-Bed Villa</a></li>
+                <li><a class="dropdown-item" href="room-superior-twin.html">Deluxe Single (Balcony)</a></li>
+                <li><a class="dropdown-item" href="room-premier-suite.html">Deluxe Double Room</a></li>
+                <li><a class="dropdown-item" href="room-family.html">6-Bedroom Villa (10 Guests)</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="dining.html" class="nav-link">Dining & Bar</a></li>
+            <li class="nav-item"><a href="amenities.html" class="nav-link">Amenities</a></li>
+            <li class="nav-item active"><a href="booking.html" class="nav-link active" aria-current="page">Booking</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="plan-your-stay.html" class="nav-link">Plan your stay</a></li>
+          </ul>
+        </div>
+
+        <div class="header-actions">
+          <button type="button" class="header-search-btn" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+          <button type="button" class="mobile-nav-toggle" aria-label="Open mobile menu" aria-controls="nav-menu-wrapper" aria-expanded="false">
+            <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- PAGE HERO -->
+    <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80');">
+      <div class="page-hero-overlay"></div>
+      <div class="container page-hero-content">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Direct Booking</li>
+          </ol>
+        </nav>
+        <span class="badge bg-white text-navy px-3 py-1 rounded-pill fw-bold text-uppercase mb-2">Check-in: 1:00 PM • Check-out: 12:00 PM • Min Stay: 1 Night</span>
+        <h1 class="text-white mb-2">Reserve Your Stay in Kitulgala</h1>
+        <p class="lead text-white-50" style="max-width: 650px;">
+          Free cancellation policy. Pet-friendly rooms, free private on-site parking, Chinese restaurant on property, and authentic Sri Lankan hill-country hospitality.
+        </p>
+      </div>
+    </section>
+
+    <!-- WIZARD -->
+    <section class="section section-sand py-5">
+      <div class="container">
+        
+        <!-- Steps Indicator -->
+        <div class="d-flex justify-content-center flex-wrap gap-3 mb-5" aria-label="Booking Progress">
+          <div class="booking-step-badge active" id="step-badge-1">
+            <span>1</span> Dates & Room
+          </div>
+          <div class="booking-step-badge" id="step-badge-2">
+            <span>2</span> Guest Info & Extras
+          </div>
+          <div class="booking-step-badge" id="step-badge-3">
+            <span>3</span> Confirmation
+          </div>
+        </div>
+
+        <div class="row g-5">
+          <!-- MAIN FORM COLUMN -->
+          <div class="col-lg-8">
+            
+            <!-- STEP 1: DATES & ROOM SELECTION -->
+            <div id="booking-step-1">
+              <!-- Dates Card -->
+              <div class="card border-0 shadow-sm rounded-4 p-4 bg-white mb-4">
+                <h2 class="h4 text-navy font-serif mb-3">1. Select Travel Dates & Guests</h2>
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <label class="form-label-custom" for="booking-checkin">Check-In (From 1:00 PM)</label>
+                    <input type="date" id="booking-checkin" class="form-control-custom" required>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label-custom" for="booking-checkout">Check-Out (Until 12:00 PM)</label>
+                    <input type="date" id="booking-checkout" class="form-control-custom" required>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label-custom" for="booking-guests">Number of Guests</label>
+                    <select id="booking-guests" class="form-control-custom">
+                      <option value="1">1 Guest (Single Room)</option>
+                      <option value="2" selected>2 Guests (Twin / Double)</option>
+                      <option value="3">3 Guests (Double + Extra)</option>
+                      <option value="7">7 Guests (Group Stay)</option>
+                      <option value="10">10 Guests (Full 6-Bed Villa)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Room Options List -->
+              <div class="card border-0 shadow-sm rounded-4 p-4 bg-white mb-4">
+                <h2 class="h4 text-navy font-serif mb-3">2. Choose Accommodation</h2>
+                <div class="d-flex flex-column gap-3">
+                  
+                  <!-- Option 1: Deluxe Single -->
+                  <div class="booking-room-option selected" data-room-id="deluxe-single">
+                    <div class="row align-items-center g-3">
+                      <div class="col-sm-4">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" 
+                             alt="Deluxe Single Room with Balcony" class="rounded-3 w-100 object-fit-cover" style="height: 120px;" loading="lazy">
+                      </div>
+                      <div class="col-sm-5">
+                        <span class="badge bg-success text-white small mb-1">Affordable Choice</span>
+                        <h3 class="h5 text-navy mb-1">Deluxe Single Room with Balcony</h3>
+                        <p class="small text-muted mb-1">1 Twin Bed • Private Balcony • Air Conditioning • Room Service</p>
+                        <span class="badge bg-light text-dark small">Pets Allowed • Free Parking</span>
+                      </div>
+                      <div class="col-sm-3 text-sm-end">
+                        <div class="fs-4 font-serif fw-bold text-coral">$72.15</div>
+                        <span class="small text-muted">/ night</span>
+                        <div class="mt-2">
+                          <input type="radio" name="selectedRoomRadio" id="radio-single" class="form-check-input" checked>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Option 2: Deluxe Double -->
+                  <div class="booking-room-option" data-room-id="deluxe-garden">
+                    <div class="row align-items-center g-3">
+                      <div class="col-sm-4">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" 
+                             alt="Deluxe Double Room with Balcony" class="rounded-3 w-100 object-fit-cover" style="height: 120px;" loading="lazy">
+                      </div>
+                      <div class="col-sm-5">
+                        <span class="badge bg-teal text-white small mb-1" style="background-color: var(--color-teal);">Scenic Balcony</span>
+                        <h3 class="h5 text-navy mb-1">Deluxe Double Room with Balcony</h3>
+                        <p class="small text-muted mb-1">King/Queen Bed • Mountain-Garden View • A/C • En-suite</p>
+                        <span class="badge bg-light text-dark small">Pet & Child Friendly</span>
+                      </div>
+                      <div class="col-sm-3 text-sm-end">
+                        <div class="fs-4 font-serif fw-bold text-coral">$104.00</div>
+                        <span class="small text-muted">/ night</span>
+                        <div class="mt-2">
+                          <input type="radio" name="selectedRoomRadio" id="radio-double" class="form-check-input">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Option 3: 6-Bedroom Villa -->
+                  <div class="booking-room-option" data-room-id="entire-villa">
+                    <div class="row align-items-center g-3">
+                      <div class="col-sm-4">
+                        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80" 
+                             alt="6-Bedroom Private Villa in Kitulgala" class="rounded-3 w-100 object-fit-cover" style="height: 120px;" loading="lazy">
+                      </div>
+                      <div class="col-sm-5">
+                        <span class="badge bg-navy text-white small mb-1" style="background-color: var(--color-navy);">Full Property Retreat</span>
+                        <h3 class="h5 text-navy mb-1">6-Bedroom Villa (Up to 10 Guests)</h3>
+                        <p class="small text-muted mb-1">6 Bedrooms • 2 Bathrooms • Private Gardens • Dedicated Parking</p>
+                        <span class="badge bg-light text-dark small">Fits 10 Guests • Free Cancellation</span>
+                      </div>
+                      <div class="col-sm-3 text-sm-end">
+                        <div class="fs-4 font-serif fw-bold text-coral">$280.00</div>
+                        <span class="small text-muted">/ night (villa total)</span>
+                        <div class="mt-2">
+                          <input type="radio" name="selectedRoomRadio" id="radio-villa" class="form-check-input">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Next Button -->
+              <div class="text-end">
+                <button type="button" class="btn btn-coral btn-lg" id="go-to-step-2">
+                  Continue to Guest Info & Extras
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 2: GUEST DETAILS & ADD-ONS -->
+            <div id="booking-step-2" style="display: none;">
+              <!-- Add-ons Selection -->
+              <div class="card border-0 shadow-sm rounded-4 p-4 bg-white mb-4">
+                <h2 class="h4 text-navy font-serif mb-3">Optional Experiences & Services</h2>
+                <div class="d-flex flex-column gap-3">
+                  
+                  <label class="p-3 border rounded-3 d-flex align-items-start gap-3 cursor-pointer">
+                    <input type="checkbox" class="form-check-input booking-addon-checkbox mt-1" data-name="Kelani River White Water Rafting" data-cost="35" data-per-guest="true">
+                    <div class="flex-grow-1">
+                      <div class="d-flex justify-content-between">
+                        <strong>Kelani River White Water Rafting Excursion</strong>
+                        <span class="text-coral fw-bold">+$35 / person</span>
+                      </div>
+                      <p class="small text-muted mb-0">Grade 3 river rafting adventure with certified guides, helmets, and life jackets.</p>
+                    </div>
+                  </label>
+
+                  <label class="p-3 border rounded-3 d-flex align-items-start gap-3 cursor-pointer">
+                    <input type="checkbox" class="form-check-input booking-addon-checkbox mt-1" data-name="Chinese Banquet Dinner" data-cost="40" data-per-guest="false">
+                    <div class="flex-grow-1">
+                      <div class="d-flex justify-content-between">
+                        <strong>Chinese Banquet Dinner for 2 (Restaurant or Room Service)</strong>
+                        <span class="text-coral fw-bold">+$40 flat</span>
+                      </div>
+                      <p class="small text-muted mb-0">4-course authentic Chinese meal: noodles, Szechuan chicken, dumplings, and spring rolls.</p>
+                    </div>
+                  </label>
+
+                  <label class="p-3 border rounded-3 d-flex align-items-start gap-3 cursor-pointer">
+                    <input type="checkbox" class="form-check-input booking-addon-checkbox mt-1" data-name="Pet Stay Arrangement" data-cost="10" data-per-guest="false">
+                    <div class="flex-grow-1">
+                      <div class="d-flex justify-content-between">
+                        <strong>Pet Stay Arrangement & Garden Kit</strong>
+                        <span class="text-coral fw-bold">+$10 flat</span>
+                      </div>
+                      <p class="small text-muted mb-0">Pet bed setup, food bowls, and cleanup bags for your dog or cat.</p>
+                    </div>
+                  </label>
+
+                  <label class="p-3 border rounded-3 d-flex align-items-start gap-3 cursor-pointer">
+                    <input type="checkbox" class="form-check-input booking-addon-checkbox mt-1" data-name="Airport / Colombo Transfer" data-cost="65" data-per-guest="false">
+                    <div class="flex-grow-1">
+                      <div class="d-flex justify-content-between">
+                        <strong>Airport / Colombo Private Car Transfer</strong>
+                        <span class="text-coral fw-bold">+$65 flat</span>
+                      </div>
+                      <p class="small text-muted mb-0">Direct air-conditioned pickup from Bandaranaike International Airport (CMB) or Colombo to Kitulgala.</p>
+                    </div>
+                  </label>
+
+                </div>
+              </div>
+
+              <!-- Guest Form -->
+              <div class="card border-0 shadow-sm rounded-4 p-4 bg-white mb-4">
+                <h2 class="h4 text-navy font-serif mb-3">Guest Contact Details</h2>
+                <form id="finalize-booking-form" novalidate>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label-custom" for="guest-name">Full Name *</label>
+                      <input type="text" id="guest-name" class="form-control-custom" placeholder="e.g. Rohitha Senanayake" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label-custom" for="guest-email">Email Address *</label>
+                      <input type="email" id="guest-email" class="form-control-custom" placeholder="name@example.com" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label-custom" for="guest-phone">Phone / WhatsApp *</label>
+                      <input type="tel" id="guest-phone" class="form-control-custom" placeholder="+94 77 000 0000" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label-custom">Payment Method</label>
+                      <select class="form-control-custom">
+                        <option>Pay at Hotel (Cash / Visa / Mastercard on Arrival)</option>
+                        <option>Credit Card Guarantee (Online)</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label-custom">Special Requests or Pet Details</label>
+                      <textarea id="guest-notes" class="form-control-custom" rows="2" placeholder="Traveling with pet (dog/cat), ground-floor room preference, late check-in arrival time..."></textarea>
+                    </div>
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top">
+                    <button type="button" class="btn btn-outline-navy" id="back-to-step-1">← Back to Rooms</button>
+                    <button type="submit" class="btn btn-coral btn-lg">
+                      Confirm Free Cancellation Reservation
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- STEP 3: CONFIRMATION VOUCHER -->
+            <div id="booking-step-3" style="display: none;">
+              <div class="card border-0 shadow-lg rounded-4 p-5 bg-white text-center">
+                <div class="amenity-icon-wrap bg-success text-white mx-auto mb-3" style="width: 72px; height: 72px; font-size: 2rem;">
+                  ✓
+                </div>
+                <span class="kicker text-success">Reservation Confirmed</span>
+                <h2 class="h2 text-navy mb-2 font-serif">We Look Forward to Welcoming You, <span id="confirmed-guest-name">Valued Guest</span>!</h2>
+                <p class="text-muted mb-4">
+                  Your reservation at Seravelle Kithulgala is confirmed. Confirmation details sent to <strong id="confirmed-guest-email" class="text-dark"></strong>.
+                </p>
+
+                <!-- Receipt Box -->
+                <div class="p-4 rounded-4 bg-sand-light text-start mb-4 mx-auto" style="max-width: 520px; background-color: var(--color-sand-light);">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Booking Reference:</span>
+                    <strong class="text-navy fs-5" id="confirmed-ref-number">SERAVELLE-LK-146997</strong>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Accommodation:</span>
+                    <strong class="text-navy" id="confirmed-room-name">Deluxe Single Room with Balcony</strong>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Schedule:</span>
+                    <strong class="text-navy" id="confirmed-dates">Dates</strong>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Location:</span>
+                    <span class="text-navy">Police Station Road, Oruthota, Kitulgala</span>
+                  </div>
+                  <div class="d-flex justify-content-between pt-2 border-top">
+                    <span class="text-navy fw-bold">Estimated Total:</span>
+                    <strong class="text-coral fs-5" id="confirmed-grand-total">$0.00</strong>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-center gap-3">
+                  <button type="button" class="btn btn-outline-navy" onclick="window.print()">
+                    🖨️ Print Voucher
+                  </button>
+                  <a href="plan-your-stay.html" class="btn btn-coral">
+                    Kitulgala Travel Guide & Directions
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SUMMARY STICKY COLUMN -->
+          <div class="col-lg-4">
+            <div class="order-summary-card sticky-top" style="top: 100px;">
+              <h2 class="h4 text-navy font-serif mb-3">Stay Summary</h2>
+              
+              <div class="summary-line">
+                <span>Room Type:</span>
+                <strong id="summary-room-name" class="text-navy">Deluxe Single</strong>
+              </div>
+
+              <div class="summary-line">
+                <span>Nights:</span>
+                <strong id="summary-nights" class="text-navy">1 Night (Min 1)</strong>
+              </div>
+
+              <div class="summary-line">
+                <span>Dates:</span>
+                <strong id="summary-dates" class="text-navy">Dates</strong>
+              </div>
+
+              <div class="summary-line">
+                <span>Guests:</span>
+                <strong id="summary-guests" class="text-navy">2 Guests</strong>
+              </div>
+
+              <div class="summary-line">
+                <span>Check-in:</span>
+                <span class="text-dark">From 1:00 PM</span>
+              </div>
+
+              <div class="summary-line">
+                <span>Check-out:</span>
+                <span class="text-dark">Until 12:00 PM</span>
+              </div>
+
+              <hr class="my-3">
+
+              <div class="summary-line">
+                <span>Room Subtotal:</span>
+                <span id="summary-room-total">$72.15</span>
+              </div>
+
+              <div class="summary-line">
+                <span>Selected Add-ons:</span>
+                <span id="summary-addons-total">$0.00</span>
+              </div>
+
+              <div class="summary-line">
+                <span>Local Tourism Tax (10%):</span>
+                <span id="summary-taxes">$7.22</span>
+              </div>
+
+              <div class="summary-line text-success fw-bold" id="summary-discount-row" style="display: none;">
+                <span>Discount:</span>
+                <span id="summary-discount-val">-$7.22</span>
+              </div>
+
+              <div class="summary-total">
+                <span>Estimated Total:</span>
+                <span class="text-coral" id="summary-grand-total">$79.37</span>
+              </div>
+
+              <!-- Promo Code -->
+              <div class="mt-4 pt-3 border-top">
+                <label class="form-label-custom" for="promo-code-input">Promo Code</label>
+                <div class="input-group d-flex gap-2">
+                  <input type="text" id="promo-code-input" class="form-control-custom" placeholder="e.g. SERAVELLE10" style="padding-left: 14px;">
+                  <button type="button" class="btn btn-outline-navy btn-sm" id="apply-promo-btn">Apply</button>
+                </div>
+                <div id="promo-message"></div>
+              </div>
+
+              <!-- Trust Note -->
+              <div class="mt-4 text-center text-muted small">
+                ✓ Free Cancellation Policy<br>
+                ✓ Free Private Parking On-Site<br>
+                ✓ Pet-Friendly Property
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="footer-brand">Seravelle Kithulgala<span class="brand-dot" aria-hidden="true"></span></a>
+          <p class="pe-lg-4">Seravelle Kithulgala is a 4-star garden hotel located on Police Station Road, Oruthota, Kitulgala, Sri Lanka. Featuring authentic Chinese cuisine, air-conditioned rooms with balconies, pet-friendly grounds, and full 6-bedroom villa accommodations.</p>
+        </div>
+        <div class="col-lg-2 col-md-6 col-6">
+          <h3 class="footer-title">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="room.html">Rooms & 6-Bed Villa</a></li>
+            <li><a href="dining.html">Chinese Restaurant</a></li>
+            <li><a href="amenities.html">Hotel Amenities</a></li>
+            <li><a href="plan-your-stay.html">Plan Your Stay</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <h3 class="footer-title">Accommodations</h3>
+          <ul class="footer-links">
+            <li><a href="room-superior-twin.html">Deluxe Single (Balcony)</a></li>
+            <li><a href="room-premier-suite.html">Deluxe Double Room</a></li>
+            <li><a href="room-family.html">6-Bedroom Villa (10 Guests)</a></li>
+            <li><a href="booking.html">Direct Booking (From $72)</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h3 class="footer-title">Location & Contact</h3>
+          <p class="mb-1">Police Station Road, Oruthota, Kitulgala, 71720, Sri Lanka</p>
+          <p class="mb-1">+94 (52) 228-SERA</p>
+          <p>reservations@seravelle.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Seravelle Kithulgala, Sri Lanka. All rights reserved. • <a href="privacy-policy.html" class="text-white-50">Privacy & Terms</a></div>
+        <div class="payment-badges"><span class="payment-badge">VISA</span><span class="payment-badge">MASTERCARD</span><span class="payment-badge">CASH</span><span class="payment-badge">PAYPAL</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="search-modal-backdrop" id="search-modal" role="dialog" aria-modal="true" aria-label="Site Search">
+    <div class="search-modal-dialog">
+      <div class="search-input-header">
+        <svg class="search-icon-lg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="search-modal-input" class="search-modal-input" placeholder="Search rooms, Chinese restaurant, pet policy, or Kitulgala guides..." aria-label="Search query">
+        <button type="button" class="search-close-btn" id="search-close" aria-label="Close search (Esc)">✕</button>
+      </div>
+      <ul class="search-results-list" id="search-results-list"></ul>
+    </div>
+  </div>
+
+  <script src="js/search-data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/booking.js" defer></script>
+</body>
+</html>
