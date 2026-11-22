@@ -2503,3 +2503,161 @@ p {
   backdrop-filter: blur(8px);
   border: 1px solid var(--color-border-gold);
 }
+
+
+/* --------------------------------------------------------------------------
+   14. OFFICIAL TARIFF & RATE SHEET (VALID 01/04/2026 - 31/10/2026)
+   -------------------------------------------------------------------------- */
+.official-tariff-card {
+  background-color: var(--color-surface-cream);
+  border: 1px solid var(--color-border-gold);
+  border-radius: var(--radius-lg);
+  padding: 32px 34px;
+  box-shadow: 0 10px 30px rgba(9, 26, 21, 0.06);
+  margin-top: var(--space-8);
+}
+
+.tariff-validity-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-depth-dark);
+  color: var(--color-accent-gold);
+  border: 1px solid var(--color-border-gold);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.tariff-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 16px;
+}
+
+.tariff-table th {
+  background: var(--color-primary-dark);
+  color: var(--color-white);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  padding: 14px 16px;
+  border-bottom: 2px solid var(--color-accent-gold);
+  text-align: left;
+}
+
+.tariff-table th:first-child {
+  border-top-left-radius: var(--radius-md);
+}
+
+.tariff-table th:last-child {
+  border-top-right-radius: var(--radius-md);
+  text-align: right;
+}
+
+.tariff-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(200, 169, 106, 0.22);
+  color: var(--color-text-on-light);
+  font-size: 0.92rem;
+  vertical-align: middle;
+}
+
+.tariff-table td:last-child {
+  text-align: right;
+}
+
+.tariff-table tbody tr:hover td {
+  background-color: rgba(200, 169, 106, 0.08);
+}
+
+.tariff-rate-bold {
+  font-weight: 700;
+  color: var(--color-depth-dark);
+  font-family: var(--font-sans);
+}
+
+.tariff-guide-rate {
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.tariff-terms-note {
+  background: rgba(15, 41, 34, 0.04);
+  border-left: 3px solid var(--color-accent-gold);
+  padding: 14px 18px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.82rem;
+  color: var(--color-muted-on-light);
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   15. ACTIVITIES & ADVENTURE SANCTUARY GRID
+   -------------------------------------------------------------------------- */
+.activity-card {
+  background: var(--color-surface-cream);
+  border: 1px solid var(--color-border-gold);
+  border-radius: var(--radius-md);
+  padding: 24px 22px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent-gold);
+  box-shadow: 0 12px 28px rgba(9, 26, 21, 0.08);
+}
+
+.activity-badge {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: var(--color-accent-gold);
+  margin-bottom: 6px;
+}
+
+.activity-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-text-on-light);
+  margin-bottom: 8px;
+}
+
+.activity-desc {
+  font-size: 0.88rem;
+  color: var(--color-muted-on-light);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   16. CORPORATE & MANAGING DIRECTOR CREDENTIAL BADGE
+   -------------------------------------------------------------------------- */
+.corporate-credential-card {
+  background: rgba(9, 26, 21, 0.6);
+  border: 1px solid var(--color-border-gold);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  margin-top: 14px;
+  color: var(--color-muted-on-dark);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.corporate-md-name {
+  color: var(--color-accent-gold);
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}

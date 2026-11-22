@@ -176,8 +176,8 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const GUIDE_LKR_RATES = {
-    'local-guide': { 'RO': 7000, 'BB': 8000, 'HB': 10000, 'FB': 12500 },
-    'foreign-guide': { 'RO': 8500, 'BB': 10000, 'HB': 12000, 'FB': 14500 }
+    'local-guide': { 'RO': 7000, 'BB': 8500, 'HB': 10500, 'FB': 12500 },
+    'foreign-guide': { 'RO': 8500, 'BB': 10500, 'HB': 12500, 'FB': 14500 }
   };
 
   const updateHeroCalculatedRate = () => {
