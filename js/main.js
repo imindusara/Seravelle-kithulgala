@@ -134,34 +134,154 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ------------------------------------------------------------------------
-     4. HERO CHECK AVAILABILITY FORM
+     4. OFFICIAL LKR DYNAMIC RATE ENGINE & HERO FORM
      ------------------------------------------------------------------------ */
+  const OFFICIAL_LKR_RATES = {
+    'deluxe-garden': {
+      name: 'Deluxe Room (Garden View)',
+      rates: {
+        'RO': { single: 14000, double: 14000, triple: 17000 },
+        'BB': { single: 15000, double: 18500, triple: 20500 },
+        'HB': { single: 18500, double: 22500, triple: 24500 },
+        'FB': { single: 22500, double: 25500, triple: 28000 }
+      }
+    },
+    'seravelle-suite': {
+      name: 'Super Deluxe Room (River View)',
+      rates: {
+        'RO': { single: 14000, double: 14000, triple: 17000 },
+        'BB': { single: 15000, double: 18500, triple: 20500 },
+        'HB': { single: 18500, double: 22500, triple: 24500 },
+        'FB': { single: 22500, double: 25500, triple: 28000 }
+      }
+    },
+    'saman-sanctuary': {
+      name: 'The Saman Sanctuary',
+      rates: {
+        'RO': { single: 18000, double: 22000, triple: 26000 },
+        'BB': { single: 20000, double: 26500, triple: 32000 },
+        'HB': { single: 24000, double: 32000, triple: 39000 },
+        'FB': { single: 28000, double: 37000, triple: 45000 }
+      }
+    },
+    'seravelle-camp': {
+      name: 'The Seravelle Camp',
+      rates: {
+        'RO': { single: 12000, double: 14000, triple: 17000 },
+        'BB': { single: 13500, double: 16500, triple: 19500 },
+        'HB': { single: 16500, double: 20500, triple: 23500 },
+        'FB': { single: 20000, double: 24000, triple: 27000 }
+      }
+    }
+  };
+
+  const GUIDE_LKR_RATES = {
+    'local-guide': { 'RO': 7000, 'BB': 8000, 'HB': 10000, 'FB': 12500 },
+    'foreign-guide': { 'RO': 8500, 'BB': 10000, 'HB': 12000, 'FB': 14500 }
+  };
+
+  const updateHeroCalculatedRate = () => {
+    const roomSelect = document.getElementById('hero-room');
+    const mealPlanSelect = document.getElementById('hero-meal-plan');
+    const occupancySelect = document.getElementById('hero-occupancy');
+    const checkinInput = document.getElementById('hero-checkin');
+    const checkoutInput = document.getElementById('hero-checkout');
+
+    const amountEl = document.getElementById('live-rate-amount');
+    const labelEl = document.getElementById('live-rate-plan-label');
+    const totalEl = document.getElementById('live-rate-stay-total');
+    const rateBox = document.getElementById('live-rate-display');
+
+    if (!roomSelect || !mealPlanSelect || !occupancySelect || !amountEl) return;
+
+    const roomId = roomSelect.value || 'deluxe-garden';
+    const mealPlan = mealPlanSelect.value || 'RO';
+    const occupancy = occupancySelect.value || 'double';
+
+    let nightlyRate = 14000;
+    let occupancyText = 'Double';
+
+    if (occupancy === 'local-guide' || occupancy === 'foreign-guide') {
+      nightlyRate = GUIDE_LKR_RATES[occupancy][mealPlan] || 8000;
+      occupancyText = occupancy === 'local-guide' ? 'Local Guide' : 'Foreign Guide';
+    } else {
+      const roomData = OFFICIAL_LKR_RATES[roomId] || OFFICIAL_LKR_RATES['deluxe-garden'];
+      const planRates = roomData.rates[mealPlan] || roomData.rates['RO'];
+      nightlyRate = planRates[occupancy] || planRates['double'] || 14000;
+      occupancyText = occupancy.charAt(0).toUpperCase() + occupancy.slice(1);
+    }
+
+    const mealPlanNames = {
+      'RO': 'Room Only',
+      'BB': 'Bed & Breakfast',
+      'HB': 'Half Board',
+      'FB': 'Full Board'
+    };
+
+    amountEl.textContent = Number(nightlyRate).toLocaleString('en-US');
+    if (labelEl) {
+      const roomName = (OFFICIAL_LKR_RATES[roomId] ? OFFICIAL_LKR_RATES[roomId].name : 'Deluxe Room').split('–')[0].trim();
+      labelEl.textContent = `${roomName} • ${occupancyText} • ${mealPlanNames[mealPlan] || mealPlan}`;
+    }
+
+    // Check dates for stay total
+    if (totalEl && checkinInput && checkoutInput && checkinInput.value && checkoutInput.value) {
+      const dIn = new Date(checkinInput.value);
+      const dOut = new Date(checkoutInput.value);
+      const diffTime = dOut - dIn;
+      const nights = Math.max(1, Math.round(diffTime / (1000 * 60 * 60 * 24)));
+      if (nights > 0 && !isNaN(nights)) {
+        const grandTotal = nightlyRate * nights;
+        totalEl.textContent = `Total (${nights} nt${nights > 1 ? 's' : ''}): LKR ${Number(grandTotal).toLocaleString('en-US')} NET`;
+      } else {
+        totalEl.textContent = '';
+      }
+    } else if (totalEl) {
+      totalEl.textContent = '';
+    }
+
+    // Small pulse animation
+    if (rateBox) {
+      rateBox.classList.remove('pulse');
+      void rateBox.offsetWidth;
+      rateBox.classList.add('pulse');
+    }
+  };
+
+  // Bind calculation listeners
+  ['hero-room', 'hero-meal-plan', 'hero-occupancy'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('change', updateHeroCalculatedRate);
+  });
+  if (checkinInput) checkinInput.addEventListener('change', updateHeroCalculatedRate);
+  if (checkoutInput) checkoutInput.addEventListener('change', updateHeroCalculatedRate);
+
+  // Initialize on load
+  updateHeroCalculatedRate();
+
   const heroBookingForm = document.getElementById('hero-booking-form');
   if (heroBookingForm) {
     heroBookingForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const checkin = checkinInput ? checkinInput.value : '';
       const checkout = checkoutInput ? checkoutInput.value : '';
-      const guests = document.getElementById('hero-guests') ? document.getElementById('hero-guests').value : '2';
-      const room = document.getElementById('hero-room') ? document.getElementById('hero-room').value : '';
+      const room = document.getElementById('hero-room') ? document.getElementById('hero-room').value : 'deluxe-garden';
+      const mealPlan = document.getElementById('hero-meal-plan') ? document.getElementById('hero-meal-plan').value : 'RO';
+      const occupancy = document.getElementById('hero-occupancy') ? document.getElementById('hero-occupancy').value : 'double';
 
       if (!checkin || !checkout) {
         showToast('Please select dates', 'Choose valid check-in and check-out dates to check availability.', 'error');
         return;
       }
 
-      // Smooth transition to booking.html with prefilled dates
       const submitBtn = heroBookingForm.querySelector('button[type="submit"]');
       if (submitBtn) {
-        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Searching Rooms...';
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Calculating Rates...';
         submitBtn.disabled = true;
       }
 
       setTimeout(() => {
-        let redirectUrl = `booking.html?checkin=${encodeURIComponent(checkin)}&checkout=${encodeURIComponent(checkout)}&guests=${encodeURIComponent(guests)}`;
-        if (room) {
-          redirectUrl += `&room=${encodeURIComponent(room)}`;
-        }
+        const redirectUrl = `booking.html?checkin=${encodeURIComponent(checkin)}&checkout=${encodeURIComponent(checkout)}&room=${encodeURIComponent(room)}&mealPlan=${encodeURIComponent(mealPlan)}&occupancy=${encodeURIComponent(occupancy)}`;
         window.location.href = redirectUrl;
       }, 400);
     });

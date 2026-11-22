@@ -663,15 +663,16 @@ p {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 115px 0 65px;
+  padding: 125px 0 75px;
   background-color: var(--color-primary-dark);
   background-image: 
-    linear-gradient(90deg, rgba(9, 26, 21, 0.88) 0%, rgba(15, 41, 34, 0.68) 55%, rgba(9, 26, 21, 0.5) 100%),
+    linear-gradient(90deg, rgba(15, 41, 34, 0.90) 0%, rgba(15, 41, 34, 0.72) 52%, rgba(15, 41, 34, 0.25) 100%),
     url('../public/main.jpeg');
   background-size: cover;
-  background-position: right center;
+  background-position: 85% center;
   background-repeat: no-repeat;
   color: var(--color-text-on-dark);
+  overflow: hidden;
 }
 
 .hero-content {
@@ -812,6 +813,122 @@ p {
 
 .form-control-custom.is-invalid ~ .invalid-feedback-custom {
   display: block;
+}
+
+
+/* Starting Rate Badge on Booking Card */
+.badge-rate-starting {
+  background: var(--color-primary-dark);
+  color: var(--color-accent-gold);
+  border: 1px solid var(--color-border-gold);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.4px;
+}
+
+/* Live Dynamic Rate Calculator Card inside Booking Widget */
+.live-rate-calculator-box {
+  background-color: var(--color-surface-cream);
+  border: 1px solid var(--color-border-gold);
+  border-radius: var(--radius-md);
+  padding: 11px 14px;
+  transition: all var(--transition-fast);
+}
+
+.live-rate-calculator-box.pulse {
+  animation: ratePulse 0.35s ease;
+}
+
+@keyframes ratePulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); border-color: var(--color-accent-gold); box-shadow: 0 0 10px rgba(200, 169, 106, 0.25); }
+  100% { transform: scale(1); }
+}
+
+.rate-box-title {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--color-primary-dark);
+}
+
+.rate-box-currency {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-accent-gold);
+  margin-right: 2px;
+}
+
+.rate-box-amount {
+  font-size: 1.25rem;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-depth-dark);
+}
+
+.rate-box-net {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-muted-on-light);
+  margin-left: 3px;
+}
+
+.rate-box-subtext {
+  font-size: 0.75rem;
+  color: var(--color-muted-on-light);
+}
+
+.rate-box-total {
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.booking-policy-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  color: var(--color-muted-on-light);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.booking-policy-footer svg {
+  color: var(--color-accent-gold);
+  flex-shrink: 0;
+}
+
+/* Bottom Quick-Highlight Strip */
+.hero-highlight-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+  border-top: 1px solid rgba(200, 169, 106, 0.28);
+  padding-top: 24px;
+  margin-top: 36px;
+  font-size: 0.9rem;
+  color: var(--color-muted-on-dark);
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.highlight-item svg {
+  color: var(--color-accent-gold);
+  flex-shrink: 0;
+}
+
+.highlight-divider {
+  color: rgba(200, 169, 106, 0.45);
+  font-size: 1.1rem;
 }
 
 .booking-trust-note {

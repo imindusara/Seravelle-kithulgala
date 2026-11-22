@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Araliya & Nil Manel (Deluxe Garden View)',
       roomNo: 'Room No. 01 & 02',
       tag: 'Deluxe Room • Garden View',
-      baseRate: 75,
+      baseRate: 14000,
       capacity: 2,
       beds: '1 King / Twin Bed with Private Terrace Access',
       size: '34 m²',
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'The Saman Sanctuary (Super Deluxe Family Cabana)',
       roomNo: 'Room No. 03',
       tag: 'Super Deluxe Family Cabana • Garden View',
-      baseRate: 135,
+      baseRate: 18000,
       capacity: 4,
       beds: 'Master Bed + Two Twin Beds (Up to 4 Pax)',
       size: '68 m²',
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'The Seravelle Suite (Super Deluxe River View)',
       roomNo: 'Room No. 04',
       tag: 'Super Deluxe Room • River View',
-      baseRate: 160,
+      baseRate: 14000,
       capacity: 2,
       beds: 'Handcrafted King Bed + Private Balcony',
       size: '56 m²',
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'The Seravelle Camp (Luxury Glamping)',
       roomNo: 'Bespoke Outdoor Sanctuary',
       tag: 'Luxury Glamping • Nature Immersion',
-      baseRate: 110,
+      baseRate: 12000,
       capacity: 2,
       beds: 'Bespoke Glamping Bed + Canopy Deck',
       size: '48 m²',
@@ -356,7 +356,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('confirmed-guest-name').textContent = guestName;
         document.getElementById('confirmed-guest-email').textContent = guestEmail;
         document.getElementById('confirmed-room-name').textContent = room.name;
-        document.getElementById('confirmed-dates').textContent = `${state.checkin} (Check-in 1:00 PM) to ${state.checkout} (Check-out 12:00 PM) – ${state.nights} night(s)`;
+        document.getElementById('confirmed-dates').textContent = `${state.checkin} (Check-in 2:00 PM) to ${state.checkout} (Check-out 11:00 AM) – ${state.nights} night(s)`;
         document.getElementById('confirmed-grand-total').textContent = summaryGrandTotal ? summaryGrandTotal.textContent : '$0.00';
 
         step2.style.display = 'none';
