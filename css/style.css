@@ -2866,3 +2866,80 @@ p {
   transform: translateY(-4px);
   box-shadow: 0 16px 36px rgba(9, 26, 21, 0.1) !important;
 }
+
+/* --------------------------------------------------------------------------
+   20. FULL MOBILE & TABLET OPTIMIZATION (480px, 768px, 1024px)
+   -------------------------------------------------------------------------- */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Tablet (<= 1024px) */
+@media (max-width: 1024px) {
+  .hero-section .col-12.text-center {
+    padding-top: 180px !important;
+  }
+}
+
+/* Mobile & Small Tablet (<= 768px) */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .section {
+    padding: 52px 0;
+  }
+
+  .hero-section .col-12.text-center {
+    padding-top: 120px !important;
+  }
+
+  .btn,
+  .nav-link,
+  .dropdown-item,
+  .mobile-nav-toggle,
+  .form-control-custom {
+    min-height: 44px;
+  }
+
+  /* Prevent iOS auto-zoom on form focus */
+  input, select, textarea, .form-control-custom {
+    font-size: 16px !important;
+  }
+
+  .newsletter-box {
+    padding: 36px 20px !important;
+  }
+
+  .official-tariff-card {
+    padding: 20px 16px !important;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Small Phones (<= 480px) */
+@media (max-width: 480px) {
+  .hero-section .col-12.text-center {
+    padding-top: 90px !important;
+  }
+
+  .room-listing-item .position-relative {
+    height: 220px !important;
+  }
+
+  .room-listing-item[data-category="packages"] .d-flex.justify-content-between.align-items-start {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+}
